@@ -1,6 +1,6 @@
 # Power Management Inhibition
 
-This KDE Plasma 5 applet let you see information power management inhibition.
+This KDE Plasma 5 applet let you see information about power management inhibition.
 
 ![Screenshot](screenshot.png)
 
