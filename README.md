@@ -1,6 +1,6 @@
 # Power Management Inhibition
 
-This KDE Plasma 5 applet let you see information about power management inhibition.
+This KDE Plasma 5 applet let you see information about power management inhibition. Available in the [KDE Store](https://store.kde.org/p/1426768).
 
 ![Screenshot](screenshot.png)
 
