@@ -26,9 +26,11 @@ ColumnLayout {
             width: units.iconSizes.small
 
             PlasmaCore.SvgItem {
-                anchors.fill: parent
+                anchors.horizontalCenter: parent.horizontalCenter
                 elementId: "vertical-line"
                 svg: lineSvg
+                width: Math.min(parent.width, naturalSize.width * units.devicePixelRatio * 3)
+                height: parent.height
             }
         }
 
