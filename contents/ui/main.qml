@@ -8,16 +8,6 @@ Item {
     property var inhibitingAppList: []
     property var messageList: {
         let messages = [];
-        // charge limit warning
-        if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data["Battery"]) {
-            const chargeStopThreshold = pmSource.data["Battery"]["Charge Stop Threshold"];
-            if (chargeStopThreshold && "number" === typeof chargeStopThreshold && chargeStopThreshold > 0 && chargeStopThreshold < 100) {
-                messages.push({
-                    iconSource: "kt-speed-limits", // FIXME : Use good icon
-                    text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold)
-                });
-            }
-        }
         // laptop lid warning
         if (pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"]) {
             messages.push({
