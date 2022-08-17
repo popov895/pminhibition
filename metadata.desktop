@@ -2,7 +2,7 @@
 Name=Power Management Inhibition
 Comment=See information about power management inhibition
 Keywords=Power Management;Inhibition;Battery;System;Energy;
-Icon=games-hint
+Icon=exception
 Type=Service
 X-KDE-FormFactors=desktop
 X-KDE-ServiceTypes=Plasma/Applet

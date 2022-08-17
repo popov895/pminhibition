@@ -52,7 +52,7 @@ Item {
         return messages;
     }
 
-    Plasmoid.icon: "games-hint"
+    Plasmoid.icon: "exception"
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.toolTipMainText: i18n("Power Management Inhibition")
