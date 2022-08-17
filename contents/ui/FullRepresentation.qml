@@ -12,6 +12,7 @@ PlasmaComponents3.Page {
     PlasmaExtras.PlaceholderMessage {
         anchors.centerIn: parent
         width: parent.width - 4 * units.largeSpacing
+        iconName: "checkmark"
         text: i18n("No messages")
         visible: !contentView.visible
     }
