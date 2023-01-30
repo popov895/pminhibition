@@ -8,7 +8,7 @@ ColumnLayout {
     property var messageData: undefined
     property bool showSeparator: false
 
-    spacing: units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing
 
     MessageItem {
         Layout.fillWidth: true
@@ -16,38 +16,17 @@ ColumnLayout {
         text: root.messageData.text
     }
 
-    RowLayout {
+    ColumnLayout {
         Layout.fillWidth: true
-        spacing: units.smallSpacing
-        visible: repeater.count > 0
+        spacing: PlasmaCore.Units.smallSpacing
 
-        Item {
-            Layout.fillHeight: true
-            width: units.iconSizes.small
+        Repeater {
+            model: root.messageData.children
 
-            PlasmaCore.SvgItem {
-                anchors.horizontalCenter: parent.horizontalCenter
-                elementId: "vertical-line"
-                svg: lineSvg
-                width: Math.min(parent.width, naturalSize.width * units.devicePixelRatio * 3)
-                height: parent.height
-            }
-        }
-
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing: units.smallSpacing
-
-            Repeater {
-                id: repeater
-
-                model: root.messageData.children
-
-                MessageItem {
-                    Layout.fillWidth: true
-                    iconSource: modelData.iconSource || ""
-                    text: modelData.text
-                }
+            MessageItem {
+                Layout.fillWidth: true
+                iconSource: modelData.iconSource || ""
+                text: modelData.text
             }
         }
     }
