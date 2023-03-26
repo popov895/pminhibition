@@ -29,7 +29,7 @@ Item {
                 })(),
                 children: inhibitingAppList.map((inhibitingApp) => {
                     return {
-                        iconSource: inhibitingApp.Icon,
+                        iconSource: inhibitingApp.Icon || "application-x-executable",
                         text: (() => {
                             if (inhibitingApp.Reason)
                                 return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitingApp.Name, inhibitingApp.Reason);
