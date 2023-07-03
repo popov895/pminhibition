@@ -1,7 +1,10 @@
 [Desktop Entry]
 Name=Power Management Inhibition
-Comment=See information about power management inhibition
+Name[uk]=Блокування керування живленням
+Description=See information about power management inhibition
+Description[uk]=Перегляньте інформацію про блокування керування живленням
 Keywords=Power Management;Inhibition;Battery;System;Energy;
+Keywords[uk]=Power Management;Inhibition;Battery;System;Energy;керування живленням;акумулятор;система;енергія;батарея;живлення;
 Icon=exception
 Type=Service
 X-KDE-FormFactors=desktop
