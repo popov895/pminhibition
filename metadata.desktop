@@ -1,9 +1,12 @@
 [Desktop Entry]
 Name=Power Management Inhibition
+Name[nl]=Energiebeheerondebreking
 Name[uk]=Блокування керування живленням
 Description=See information about power management inhibition
+Description[nl]=Bekijk informatie omtrent energiebeheeronderbreking
 Description[uk]=Перегляньте інформацію про блокування керування живленням
 Keywords=Power Management;Inhibition;Battery;System;Energy;
+Keywords[nl]=Energiebeheer;Onderbreking;Accu;Batterij;Systeem;Energie;
 Keywords[uk]=Power Management;Inhibition;Battery;System;Energy;керування живленням;акумулятор;система;енергія;батарея;живлення;
 Icon=exception
 Type=Service
