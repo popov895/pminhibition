@@ -14,7 +14,7 @@ RowLayout {
 
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
         Layout.preferredHeight: Layout.preferredWidth
-        Layout.alignment: label.lineCount > 1 ? Qt.AlignTop : undefined
+        Layout.alignment: label.lineCount > 1 ? Qt.AlignTop : Qt.AlignVCenter
         Layout.topMargin: label.lineCount > 1 ? Math.max(0, (labelTextMetrics.height - Layout.preferredHeight) / 2) : 0
         visible: valid
     }
