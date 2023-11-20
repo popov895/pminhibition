@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-03 14:16+0300\n"
+"POT-Creation-Date: 2023-11-20 15:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,42 +18,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: contents/ui/FullRepresentation.qml:17 contents/ui/main.qml:51
+msgid "No messages"
+msgstr ""
+
 #: contents/ui/main.qml:15
 msgid ""
 "Your notebook is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
 
-#: contents/ui/main.qml:23
-msgid "%1 application is preventing sleep and screen locking:"
+#: contents/ui/main.qml:22
+msgid "An application is preventing sleep and screen locking:"
 msgid_plural "%1 applications are preventing sleep and screen locking:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/ui/main.qml:27
-msgid "An application is preventing sleep and screen locking:"
+#: contents/ui/main.qml:33
+msgid "unknown reason"
 msgstr ""
 
-#: contents/ui/main.qml:35
+#: contents/ui/main.qml:31
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr ""
 
-#: contents/ui/main.qml:36
-msgctxt "Application name: reason for preventing sleep and screen locking"
-msgid "%1: unknown reason"
-msgstr ""
-
-#: contents/ui/main.qml:48
+#: contents/ui/main.qml:45
 msgid "Power Management Inhibition"
 msgstr ""
 
-#: contents/ui/main.qml:53
+#: contents/ui/main.qml:50
 msgid "%1 message"
 msgid_plural "%1 messages"
 msgstr[0] ""
 msgstr[1] ""
-
-#: contents/ui/main.qml:54 contents/ui/FullRepresentation.qml:17
-msgid "No messages"
-msgstr ""
