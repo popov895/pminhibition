@@ -18,23 +18,20 @@ Item {
         // inhibiting applications
         if (inhibitingAppList.length > 0) {
             messages.push({
-                text: (() => {
-                    if (inhibitingAppList.length > 1)
-                        return i18np("%1 application is preventing sleep and screen locking:",
-                                     "%1 applications are preventing sleep and screen locking:",
-                                     inhibitingAppList.length);
-                        if (1 === inhibitingAppList.length)
-                            return i18n("An application is preventing sleep and screen locking:");
-                        return "";
-                })(),
+                text: i18np(
+                    "An application is preventing sleep and screen locking:",
+                    "%1 applications are preventing sleep and screen locking:",
+                    inhibitingAppList.length
+                ),
                 children: inhibitingAppList.map((inhibitingApp) => {
                     return {
                         iconSource: inhibitingApp.Icon || "application-x-executable",
-                        text: (() => {
-                            if (inhibitingApp.Reason)
-                                return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitingApp.Name, inhibitingApp.Reason);
-                            return i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", inhibitingApp.Name);
-                        })()
+                        text: i18nc(
+                            "Application name: reason for preventing sleep and screen locking",
+                            "%1: %2",
+                            inhibitingApp.Name,
+                            inhibitingApp.Reason ?? i18n("unknown reason")
+                        ),
                     };
                 })
             });
