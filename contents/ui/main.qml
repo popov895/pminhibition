@@ -1,8 +1,10 @@
-import QtQuick 2.0
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasma5support as P5Support
+import org.kde.kirigami as Kirigami
 
-Item {
+PlasmoidItem {
     id: root
 
     property var inhibitingAppList: []
@@ -39,35 +41,38 @@ Item {
         return messages;
     }
 
-    Plasmoid.icon: "exception"
-    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
-    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
-    Plasmoid.toolTipMainText: i18n("Power Management Inhibition")
-    Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: FullRepresentation {}
-    Plasmoid.toolTipSubText: {
-        if (messageList.length > 0)
+    switchWidth: Kirigami.Units.gridUnit * 10
+    switchHeight: Kirigami.Units.gridUnit * 10
+    toolTipMainText: i18n("Power Management Inhibition")
+    fullRepresentation: FullRepresentation {}
+    toolTipSubText: {
+        if (messageList.length > 0) {
             return i18np("%1 message", "%1 messages", messageList.length);
+        }
         return i18n("No messages");
     }
+
+    Plasmoid.title:i18n("Power Management Inhibition")
+    Plasmoid.icon: "exception"
     Plasmoid.status: {
-        if (messageList.length > 0)
+        if (messageList.length > 0) {
             return PlasmaCore.Types.ActiveStatus;
+        }
         return PlasmaCore.Types.PassiveStatus;
     }
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: pmSource
 
         engine: "powermanagement"
         connectedSources: sources
 
-        onSourceAdded: {
+        onSourceAdded: source => {
             disconnectSource(source);
             connectSource(source);
         }
 
-        onSourceRemoved: {
+        onSourceRemoved: source => {
             disconnectSource(source);
         }
 
@@ -83,8 +88,9 @@ Item {
     function updateInhibitingAppList() {
         let inhibitingApps = [];
         if (pmSource.data["Inhibitions"]) {
-            for (let key in pmSource.data["Inhibitions"])
+            for (let key in pmSource.data["Inhibitions"]) {
                 inhibitingApps.push(pmSource.data["Inhibitions"][key]);
+            }
         }
         root.inhibitingAppList = inhibitingApps;
     }

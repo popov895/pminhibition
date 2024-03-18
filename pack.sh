@@ -1,7 +1,7 @@
 #!/bin/bash
 
-packageNamespace=`kreadconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Name"`
-packageVersion=`kreadconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Version"`
+packageNamespace=`jq -r ".KPlugin.Id" "$PWD/metadata.json"`
+packageVersion=`jq -r ".KPlugin.Version" "$PWD/metadata.json"`
 packageName="${packageNamespace##*.}"
 localeFileName="plasma_applet_$packageNamespace"
 plasmoidFileName="$packageName-$packageVersion.plasmoid"
@@ -14,4 +14,4 @@ do
     msgfmt -o "$localeFilePath" "$file"
 done
 
-zip -r ../$plasmoidFileName contents metadata.desktop
+zip -r ../$plasmoidFileName contents metadata.json

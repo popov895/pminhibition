@@ -1,0 +1,38 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "popov895@ukr.net",
+                "Name": "Eugene Popov"
+            }
+        ],
+        "BugReportUrl": "https://github.com/popov895/pminhibition/issues",
+        "Category": "System Information",
+        "Description": "See information about power management inhibition",
+        "Description[nl]": "Bekijk informatie omtrent energiebeheeronderbreking",
+        "Description[uk]": "Перегляньте інформацію про блокування керування живленням",
+        "EnabledByDefault": true,
+        "FormFactors": [
+            "desktop"
+        ],
+        "Icon": "exception",
+        "Id": "org.kde.plasma.pminhibition",
+        "License": "GPL-2.0+",
+        "Name": "Power Management Inhibition",
+        "Name[nl]": "Energiebeheerondebreking",
+        "Name[uk]": "Блокування керування живленням",
+        "Version": "1.8",
+        "Website": "https://github.com/popov895/pminhibition"
+    },
+    "Keywords": "Power Management;Inhibition;Battery;System;Energy;",
+    "Keywords[nl]": "Energiebeheer;Onderbreking;Accu;Batterij;Systeem;Energie;",
+    "Keywords[uk]": "Power Management;Inhibition;Battery;System;Energy;керування живленням;акумулятор;система;енергія;батарея;живлення;",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-DBusActivationService": "org.kde.Solid.PowerManagement",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.pminhibition"
+    ]
+}

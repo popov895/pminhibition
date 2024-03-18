@@ -1,6 +1,7 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
 ColumnLayout {
     id: root
@@ -8,7 +9,7 @@ ColumnLayout {
     property var messageData: undefined
     property bool showSeparator: false
 
-    spacing: PlasmaCore.Units.smallSpacing
+    spacing: Kirigami.Units.smallSpacing
 
     MessageItem {
         Layout.fillWidth: true
@@ -18,7 +19,7 @@ ColumnLayout {
 
     ColumnLayout {
         Layout.fillWidth: true
-        spacing: PlasmaCore.Units.smallSpacing
+        spacing: Kirigami.Units.smallSpacing
 
         Repeater {
             model: root.messageData.children
@@ -31,14 +32,14 @@ ColumnLayout {
         }
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         Layout.fillWidth: true
         elementId: "horizontal-line"
         svg: lineSvg
         visible: root.showSeparator
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: lineSvg
         imagePath: "widgets/line"
     }
