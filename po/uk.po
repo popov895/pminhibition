@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 15:04+0200\n"
+"POT-Creation-Date: 2024-03-18 12:37+0000\n"
 "PO-Revision-Date: 2023-11-20 08:44-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,31 +19,29 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: contents/ui/FullRepresentation.qml:17 contents/ui/main.qml:51
-msgid "No messages"
-msgstr "Повідомлень немає"
+#: contents/ui/main.qml:17
+msgid "Your notebook is configured not to sleep when closing the lid while an "
+"external monitor is connected."
+msgstr "Ваш ноутбук налаштований так, щоб не переходити в режим сну при закритті "
+"кришки, якщо підключений зовнішній монітор."
 
-#: contents/ui/main.qml:15
-msgid "Your notebook is configured not to sleep when closing the lid while an external monitor is connected."
-msgstr "Ваш ноутбук налаштований так, щоб не переходити в режим сну при закритті кришки, якщо підключений зовнішній монітор."
-
-#: contents/ui/main.qml:22
+#: contents/ui/main.qml:24
 msgid "An application is preventing sleep and screen locking:"
 msgid_plural "%1 applications are preventing sleep and screen locking:"
 msgstr[0] "%1 застосунок перешкоджає переходу в режим сну та блокуванню екрана:"
 msgstr[1] "%1 застосунки перешкоджають переходу в режим сну та блокуванню екрана:"
 msgstr[2] "%1 застосунків перешкоджають переходу в режим сну та блокуванню екрана:"
 
-#: contents/ui/main.qml:33
+#: contents/ui/main.qml:35
 msgid "unknown reason"
 msgstr "невідома причина"
 
-#: contents/ui/main.qml:31
+#: contents/ui/main.qml:33
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: contents/ui/main.qml:45
+#: contents/ui/main.qml:46 contents/ui/main.qml:55
 msgid "Power Management Inhibition"
 msgstr "Блокування керування живленням"
 
@@ -54,11 +52,12 @@ msgstr[0] "%1 повідомлення"
 msgstr[1] "%1 повідомлення"
 msgstr[2] "%1 повідомлень"
 
+#: contents/ui/main.qml:52 contents/ui/FullRepresentation.qml:17
+msgid "No messages"
+msgstr "Повідомлень немає"
+
 #~ msgid "%1 application is preventing sleep and screen locking:"
 #~ msgid_plural "%1 applications are preventing sleep and screen locking:"
-#~ msgstr[0] ""
-#~ "%1 застосунок перешкоджає переходу в режим сну та блокуванню екрана:"
-#~ msgstr[1] ""
-#~ "%1 застосунки перешкоджають переходу в режим сну та блокуванню екрана:"
-#~ msgstr[2] ""
-#~ "%1 застосунків перешкоджають переходу в режим сну та блокуванню екрана:"
+#~ msgstr[0] "%1 застосунок перешкоджає переходу в режим сну та блокуванню екрана:"
+#~ msgstr[1] "%1 застосунки перешкоджають переходу в режим сну та блокуванню екрана:"
+#~ msgstr[2] "%1 застосунків перешкоджають переходу в режим сну та блокуванню екрана:"
