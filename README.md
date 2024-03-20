@@ -4,7 +4,7 @@ This KDE Plasma 5 applet let you see information about power management inhibiti
 
 ### Installation
 
-The applet is available for installation on the [KDE Store](https://store.kde.org/p/1426768).
+The applet is available for installation on the KDE Store: [Plasma 6](https://store.kde.org/p/2138746) / [Plasma 5](https://store.kde.org/p/1426768).
 
 To install manually follow the steps below:
 
