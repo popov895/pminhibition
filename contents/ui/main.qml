@@ -31,7 +31,7 @@ PlasmoidItem {
                         text: i18nc(
                             "Application name: reason for preventing sleep and screen locking",
                             "%1: %2",
-                            inhibitingApp.Name,
+                            inhibitingApp.PrettyName || inhibitingApp.Name,
                             inhibitingApp.Reason ?? i18n("unknown reason")
                         ),
                     };
