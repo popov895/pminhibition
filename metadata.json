@@ -22,7 +22,7 @@
         "Name": "Power Management Inhibition",
         "Name[nl]": "Energiebeheerondebreking",
         "Name[uk]": "Блокування керування живленням",
-        "Version": "1.8",
+        "Version": "1.9",
         "Website": "https://github.com/popov895/pminhibition"
     },
     "Keywords": "Power Management;Inhibition;Battery;System;Energy;",
